@@ -1,0 +1,147 @@
+@font-face {
+    font-family: 'FuturaStdMedium';
+    src: url('fonts/futurastd-medium.eot');
+    src: url('fonts/futurastd-medium.eot') format('embedded-opentype'),
+         url('fonts/futurastd-medium.woff') format('woff'),
+         url('fonts/futurastd-medium.ttf') format('truetype'),
+         url('fonts/futurastd-medium.svg#FuturaStdMedium') format('svg');
+}
+@font-face {
+    font-family: 'FuturaStdLight';
+    src: url('fonts/futurastd-light.eot');
+    src: url('fonts/futurastd-light.eot') format('embedded-opentype'),
+         url('fonts/futurastd-light.woff') format('woff'),
+         url('fonts/futurastd-light.ttf') format('truetype'),
+         url('fonts/futurastd-light.svg#FuturaStdLight') format('svg');
+}
+
+
+@charset "utf-8";
+
+body{
+	margin: 0;
+	min-width: 980px;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+img{
+	border: 0;
+}
+
+img.dot{
+	width: 40%;
+}
+
+div.menu {
+	position: fixed;
+	height: 40px;
+	background: white;
+	width: 100%;
+}
+
+div.menu h5{
+	font-family: "FuturaStdLight";
+	font-size: 14px;
+	margin-top: 10px;
+}
+
+
+
+div.menu div.name h5{
+	position: absolute;
+	margin-left: 20px;
+	padding: 0px;
+
+}
+
+div.menu div.email h5{
+	float: right;
+	margin-right: 20px;
+}
+div.menu div.email a{
+	text-decoration: none;
+	color: black;
+}
+
+ul#nav{
+	list-style: none;
+	position: fixed;
+	right: 20px;
+	top: 45px;
+}
+
+ul#nav li{
+	margin: 0 0 -5px 0;	
+}
+
+.rilogo{
+	background: url(../images/rilologo.png) 50% 220px no-repeat fixed;
+	height: 800px;
+	margin: 0 auto;
+	padding: 0;
+	position: absolute;
+	width: 900px;
+	z-index: 200;
+	top: 150px;
+}
+
+.home{
+	background:url(../images/home.jpg) 50% 0 no-repeat fixed;
+	color: white;
+	height: 900px;
+	margin: 0 auto;
+	padding: 0;
+}
+.photo{
+	margin: 0 auto;
+	padding: 0;
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+	background-attachment: fixed;
+}
+
+
+@media (max-width: 321px) {
+
+}
+@media (max-width: 480px) {
+
+}
+@media (max-width: 568px) {
+	ul#nav {
+		top: 100px;
+	}
+	div.menu {
+		height: 80px;
+	}
+	div.menu h5{
+		font-size: 21px;
+	}
+	div.menu div.email h5 {
+		float: left;
+		margin-left: 20px;
+		margin-top: 45px;
+	}
+}
+@media (max-width: 600px) {
+
+}
+@media (max-width: 768px) {
+
+}
+@media (max-width: 800px) {
+
+}
+@media (max-width: 992px) {
+
+}
+@media (max-width: 1024px) {
+
+}
+@media (max-width: 1200px) {
+
+}
+@media (max-width: 1920px) {
+
+}

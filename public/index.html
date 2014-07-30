@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="RiloSiteApp" ng-controller="SiteController">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Rilo photography</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<meta http-equiv="Expires" content="0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta http-equiv="Last-Modified" content="0">
+		<meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta name="author" content="">
+		<meta name="keywords" content="rilo photography" >
+		<meta name="description" content="Miss Pies. Autumn Winter 2014."/>
+		<link rel="shortcut icon" href="img/favicon.ico">
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js" type="text/javascript"></script>
+		<script src="http://underscorejs.org/underscore-min.js"></script>
+		<script type="text/javascript" src="lib/jquery.parallax-1.1.3.js"></script>
+		<script type="text/javascript" src="lib/jquery.scrollTo-1.4.2-min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+	</head>
+	<body>
+		<div class="menu">
+			<div class="name"><h5>DAMIAN RILO PHOTOGRAPHY</h5></div>
+			<div class="email">
+				<a href="mailto:PHOTODAMIANRILO@GMAIL.COM?Subject=Hello%20Rilo" target="_blank">
+					<h5>PHOTODAMIANRILO@GMAIL.COM</h5>
+				</a>
+			</div>
+		</div>
+		<ul id="nav">
+			<li><a href="#home" title="Next Section"><img class="dot" src="images/dot.png" alt="Link" /></a></li>
+			<li ng-repeat="item in portraits"><a href="#{{item.id}}" title="Next picture"><img ng-class="getClassForDot($last)" src="images/dot.png" alt="Link" /></a></li>
+			<li ng-repeat="item in productions"><a href="#{{item.id}}" title="Next picture"><img ng-class="getClassForDot($last)" src="images/dot.png" alt="Link" /></a></li>
+			<li ng-repeat="item in products"><a href="#{{item.id}}" title="Next picture"><img ng-class="getClassForDot($last)" src="images/dot.png" alt="Link" /></a></li>
+		</ul>
+		<div id="home" class="home">
+			<div class="story">
+				<div class="rilogo"></div>
+				<div class="float-left">
+				</div>
+			</div>
+		</div>
+		<div ng-repeat="photo in portraits" id="portrait_{{$index}}" ng-class="getPhotoClass(photo,'portrait_{{$index}}')" back-img-parallax="{{photo.path}}">
+			<!-- <div class="name">{{photo.description}}</div>-->
+		</div>
+		<div ng-repeat="photo in productions" id="production_{{$index}}" ng-class="getPhotoClass(photo,'production_{{$index}}')" back-img-parallax="{{photo.path}}">
+			<!-- <div class="name">{{photo.description}}</div>-->
+		</div>
+		<div ng-repeat="photo in products" id="product_{{$index}}" ng-class="getPhotoClass(photo,'product_{{$index}}')" back-img="{{photo.path}}">
+			<!-- <div class="name">{{photo.description}}</div>-->
+		</div>
+	</body>
+</html>
